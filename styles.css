@@ -2,7 +2,7 @@ h1,
 h2,
 ul,
 h3 {
-    color: rgb(0, 119, 255);
+    color: rgb(2, 29, 15);
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 
 a,
 p {
-    color: rgb(39, 231, 238);
+    color: rgb(0, 2, 2);
     text-decoration: none;
 }
 
@@ -35,11 +35,57 @@ img {
     width: 15vw
 }
 
-.zajmy3 {
-}
 
 #tabulka {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(80deg, rgb(5, 124, 172), rgb(199, 10, 114));
+}
+
+div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div img {
+    width: 400px;
+    height: 300px;
+    border: 2px solid; 
+    color: brown;
+    border-radius: 13px;
+    box-shadow: 4px 7px 7px 0px; 
+    color: black;
+    cursor: pointer;
+    margin: 10px;
+    transition: 400ms;
+}
+
+div img:hover {
+    filter: grayscale(1);
+    transform: scale(1.03);
+}
+
+p.description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000000;
+    text: size adjust 200px;
+}
+
+.activity {
+
+
+
+}
+
+.gallery {
+
+    justify-content: center;
 }
