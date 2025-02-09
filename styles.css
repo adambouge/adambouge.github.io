@@ -20,27 +20,6 @@ img {
     height: auto;
 }
 
-.zajmy {
-    background-color: gray;
-    width: 15vw;
-    border: 5px solid;
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.zajmy2 {
-    background-color: gray;
-    width: 15vw
-}
-
-
-#tabulka {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
 body {
     margin: 0;
