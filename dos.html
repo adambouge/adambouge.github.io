@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dos scripts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Dos Scripts</h1>
+
+    <h2>Addition</h2>
+    <p>It adds 2 numbers together</p>
+<div>
+<pre><code>cls
+@echo off
+echo "The first number is %1"
+echo "The second number is %2"
+set /a result=%1 + %2
+echo "The addition is: %result%"</code></pre>
+</div>
+
+<h2>Create 3 directories</h2>
+<p>It creates 3 directories</p>
+<div>
+<pre><code>mkdir apple
+mkdir pineapple
+mkdir mango
+mkdir apple\haha
+pause</code></pre>
+</div>
+
+<h2>Delete 3 directories</h2>
+<p>It deletes 3 directories</p>
+<div>
+<pre><code>rmdir /S /Q apple
+rmdir /S /Q pineapple
+rmdir /S /Q mango
+pause</code></pre>
+</div>
+
+<h2>Simple IP scanner</h2>
+<p>It finds active IPs on the local network</p>
+<div>
+<pre><code>@echo off
+for /L %%i in (1,1,255) do (
+echo 192.168.0.%%i
+ping -n 1 192.168.0.%%i
+if %errorlevel% equ 0 echo 192.168.0.%%i is online
+)  
+pause</code></pre>
+</div>
+
+<h2>Portfolio sync</h2>
+<p>It synchronizes the portfolio folder</p>
+<div>
+<pre><code>@echo off
+xcopy C:\Users\adamb\OneDrive\Desktop\PORTFOLIO D:\PORTFOLIO /E
+xcopy D:\PORTFOLIO C:\Users\adamb\OneDrive\Desktop\PORTFOLIO /E
+pause</code></pre>
+</div>
+
+<footer>
+    <button>
+        <a href="index.html">Back</a>
+    </button>
+</footer>
+
+
+
+

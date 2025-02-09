@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bash Scripts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Bash Scripts</h1>
+
+    <h2>Addition</h2>
+    <p>It adds 2 numbers: ./addition.sh 2 3</p>
+<div>
+<pre><code>#!/bin/bash
+sum=$(( $1 + $2 ))
+echo "The first number is $1"
+echo "The second number is $2"
+echo "The addition is $sum"</code></pre>
+</div>
+
+<h2>Simple IP scanner</h2>
+<p>It finds active IPs on the local network</p>
+<div>
+<pre><code>#!/bin/bash
+
+# We will test the last part of the ip
+prefix="192.168.0."
+
+# Test last part of the ip from 1 to 255
+for i in {1..255}
+do
+    # Try to ping once the ip
+    ping -c 1 $prefix$i > /dev/null
+    
+    # If ping is success
+    if (($? == 0))
+    then
+        echo $prefix$i is online
+    fi
+done</code></pre>
+</div>
+
+<h2>Simple port scanner</h2>
+<p>It finds the open ports of an IP</p>
+<div>
+<pre><code>#!/bin/bash
+
+# Ip is given as an argument
+ip=$1
+    
+# Test ports from 1 to 100 (max: 65535)
+for port in {1..100}
+do
+     # Use nc to test the port
+    nc -z -w 1 $ip $port
+        
+    # If nc returns success
+    if (($? == 0))
+    then
+        echo port $port is open
+    fi
+done
+</code></pre>
+</div>
+
+<h2>Portfolio sync</h2>
+<p>It synchronizes the portfolio folder (PC/USB stick)</p>
+<div><pre><code>#!/bin/bash
+rsync -av --no-perms /home/adam/Desktop/PORTFOLIO /media/adam/SAVE/
+rsync -av /media/adam/SAVE/PORTFOLIO /home/adam/Desktop/</code></pre></div>
+
+    <footer>
+        <button>
+            <a href="index.html">Back</a>
+        </button>
+    </footer>
+
+</body>
+
+</html>
