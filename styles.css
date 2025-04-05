@@ -1,7 +1,16 @@
-h1,
-h2,
+@font-face {
+    font-family: 'fonts';
+    src: url(fonts/after-a-rain.otf);
+}
+
+@font-face {
+    font-family: 'fonts-h1';
+    src: url(fonts/copeland.otf);
+}
+
 ul,
 h3 {
+    font-family: 'fonts';
     color: rgb(2, 29, 15);
 }
 
@@ -11,6 +20,7 @@ body {
 
 a,
 p {
+    font-family: 'fonts';
     color: rgb(0, 2, 2);
     text-decoration: none;
 }
@@ -19,7 +29,6 @@ img {
     width: 50%;
     height: auto;
 }
-
 
 body {
     margin: 0;
@@ -72,4 +81,20 @@ pre {
 code {
     font-family: 'Courier New', Courier, monospace;
     color: #333;
+}
+
+h1,
+h2 {
+    font-family: 'fonts-h1';
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
 }
